@@ -6,13 +6,13 @@ namespace GuessTheNumber
     {
         static void Main(string[] args)
         {
-            // Scrie un program care cere de la user sa ghiceasca un numar si afiseaza urmatoarele:
-            // Daca numarul ghicit este mai mare decat 4 afiseaza mai putin
-            // Daca numarul ghicit este mai mic decat 4 afiseaza mai mult
-            // Daca numarul ghicit este 4 afiseaza bravo ai ghicit
-            // TODO: Update1 - Sa se afiseze la finalul programului din cate incercari s-a ghicit numarul
-            // TODO: Update2 - Intreaba jucatorul daca vrea sa repete jocul 
-            // TODO: Update3 - Stabileste un numar maxim de vieti
+            // Write a program that asks the user to guess a number and displays the following:
+            // If the guessed number is greater than 4, display less
+            // If the guessed number is less than 4, display more
+            // If the guessed number is 4, it displays congrats you guessed
+            // TODO: Update1 - Display at the end of the program how many attempts the number was guessed from
+            // TODO: Update2 - Ask the player if he wants to repeat the game
+            // TODO: Update3 - Set a maximum number of lives
 
             int lives = 7;
             int attempts = 0;
@@ -33,7 +33,7 @@ namespace GuessTheNumber
                 if (lives == 0)
                 {
                     Console.ForegroundColor = ConsoleColor.DarkRed;
-                    Console.WriteLine("Game Over"); // scris cu rosu 
+                    Console.WriteLine("Game Over"); // To be written in Darkred
                     Console.ForegroundColor = ConsoleColor.Black;
                     break;
                 }
@@ -41,19 +41,19 @@ namespace GuessTheNumber
                 if (guessedNumber > hiddenNumber)
                 {
                     Console.ForegroundColor = ConsoleColor.DarkYellow;
-                    Console.WriteLine("Less"); // Scris cu galben
+                    Console.WriteLine("Less"); // To be written in Darkyellow
                     lives--;
                 }
                 else if (guessedNumber < hiddenNumber)
                 {
                     Console.ForegroundColor = ConsoleColor.DarkYellow;
-                    Console.WriteLine("More"); // Scris cu galben
+                    Console.WriteLine("More"); // To be written in Darkyellow
                     lives--;
                 }
                 else
                 {
                     Console.ForegroundColor = ConsoleColor.DarkGreen;
-                    Console.WriteLine($"Guessed!\nYou finished the game using {attempts} attempts"); // scris cu verde
+                    Console.WriteLine($"Guessed!\nYou finished the game using {attempts} attempts"); // To be written in Darkgreen
                     Console.ForegroundColor = ConsoleColor.Black;
                     break;
                 }
